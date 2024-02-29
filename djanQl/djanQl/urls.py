@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from homepage.views import home_view
+from homepage.views import context_view
+from homepage.views import forloop_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_view , name="home_view")
+    path('', home_view , name="home_view"),
+    path('context/', context_view),
+    path('forloop/', forloop_view)
 ]
