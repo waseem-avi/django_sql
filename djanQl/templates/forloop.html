@@ -2,7 +2,14 @@
 {% block content %}
 <ul>
 {% for list_item in my_list %}
+
+{%if list_item == 2%}
+<li>HERE the condition was true</li>
+{%else%}
 <li>{{list_item}}</li>
+
+{%endif%}
+
 {% endfor %}
 </ul>
 {%endblock%}
