@@ -20,7 +20,7 @@ from homepage.views import home_view
 from homepage.views import context_view
 from homepage.views import forloop_view
 from student.views import student_details_view
-from student.views import student_create_view
+from student.views import student_create_view, dynamic_lookup_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +28,6 @@ urlpatterns = [
     path('context/', context_view),
     path('forloop/', forloop_view),
     path('student/', student_details_view),
-    path('create/', student_create_view)
+    path('create/', student_create_view),
+    path('<id>/', dynamic_lookup_view)
 ]

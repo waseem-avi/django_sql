@@ -5,8 +5,20 @@ from .models import Student
 from .forms import StudentForm, RawStudentForm
 # Create your views here.
 
+def dynamic_lookup_view(request,id):
+    obj = Student.objects.get(id=id)
+    context = {
+        "object":obj
+    }
+    return render(request, "student_detail.html", context)
+
+
+
+
+
+
 def student_details_view(request):
-    obj = Student.objects.get(id=1)
+    obj = Student.objects.get(id = 1)
     # context = {
     #     "first_name":obj.firstname,
     #     "last_name":obj.lastname
