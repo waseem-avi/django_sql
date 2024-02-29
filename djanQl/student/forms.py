@@ -11,3 +11,8 @@ class StudentForm(forms.ModelForm):
             'lastname',
             'passed'
         ]
+
+class RawStudentForm(forms.Form):
+    id        = forms.IntegerField()
+    firstname = forms.CharField()
+    lastname  = forms.CharField()
