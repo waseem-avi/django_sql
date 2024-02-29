@@ -1,7 +1,25 @@
 {% extends 'base.html' %}
 {% block content%}
 
-    <h1>Hello world!</h1>
-    <p>This is a template</p>
+    <table>
+        <thead>
+            <tr>
+            <th>id</th>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>passed</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in data%}
+            <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.firstname}}</td>
+            <td>{{student.lastname}}</td>
+            <td>{{student.passed}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
     
 {%endblock%}
