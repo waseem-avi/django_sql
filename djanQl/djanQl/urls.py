@@ -20,11 +20,13 @@ from homepage.views import home_view
 from homepage.views import context_view
 from homepage.views import forloop_view
 from student.views import student_details_view
+from student.views import student_create_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view , name="home_view"),
     path('context/', context_view),
     path('forloop/', forloop_view),
-    path('student/', student_details_view)
+    path('student/', student_details_view),
+    path('create/', student_create_view)
 ]
